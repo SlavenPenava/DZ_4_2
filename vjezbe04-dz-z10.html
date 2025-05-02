@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8"/>
+<title>Varijable</title>
+</head>
+<body>
+<p id="rezultat"></p>
+<script type="text/javascript">
+function randBrojevi(donji,gornji){
+let rez=[];
+for(let i=0;i<5;i++){
+	let rand=Math.floor(Math.random()*(gornji-donji-1))+donji+1;
+	rez.push(rand);
+}
+return rez;
+};
+document.getElementById("rezultat").textContent=randBrojevi(0,20);
+</script>
+</body>
+</html>

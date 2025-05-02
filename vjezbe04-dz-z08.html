@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8"/>
+<title>Varijable</title>
+</head>
+<body>
+<p id="rezultat"></p>
+<script type="text/javascript">
+var arr=['Ovo','je','My','prvi','komad','OF','JAVASCRIPT','koda','Koji','je','proradio',];
+function filterArray(arr){
+let rez= arr.filter(function(item){
+	return /[A-Z]/.test(item) && item.length >=5;
+	});
+	document.getElementById("rezultat").textContent=rez.join(", ");
+};
+filterArray(arr);
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8"/>
+<title>Varijable</title>
+</head>
+<body>
+<p id="rezultat"></p>
+<script type="text/javascript">
+let n=prompt("Unesi broj");
+ispis(n);
+function ispis(n){
+let rez="";
+for(let i=0;i<=n;i++){
+	if(savrsenBroj(i)){
+	rez+=i+" ";
+	}
+}
+document.getElementById("rezultat").textContent=rez.trim();
+console.log(rez);
+}
+function savrsenBroj(num){
+if(num<=1) return false;
+var sum=1;
+let granica=Math.sqrt(num);
+for(let i=2;i<=granica;i++){
+	if(num%i===0){
+	sum+=i;
+	if(i !==num/i) sum+=num/i;
+	}
+}
+return sum===num;
+}
+</script>
+</body>
+</html>

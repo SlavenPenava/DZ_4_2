@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8"/>
+<title>Varijable</title>
+</head>
+<body>
+<p id="rezultat"></p>
+<script type="text/javascript">
+let n=prompt("Unos: ");
+let kvadrat=function(n){
+if(isNaN(n)){
+	return "Greska: nije broj!";
+	}else{
+	return Number(n)* Number(n);
+	}
+};
+document.getElementById("rezultat").textContent=kvadrat(n);
+</script>
+</body>
+</html>
